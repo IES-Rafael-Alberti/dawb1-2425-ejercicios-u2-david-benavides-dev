@@ -5,13 +5,7 @@ from utils import *
 
 
 def main():
-    parar = False
-
-    while parar is False:
-        numero = pedir_num("Introduce un número entero positivo: ")
-
-        if numero == 0:
-            parar = True
+    pass
 
 
 if __name__ == "__main__":
