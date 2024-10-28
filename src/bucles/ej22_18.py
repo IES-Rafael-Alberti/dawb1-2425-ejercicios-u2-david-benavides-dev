@@ -4,24 +4,33 @@
 from utils import *
 
 
-numero = 0
-cont = 0
-while numero != -1:
-    numero = int(input("NUMBER "))
-    if numero % 2 == 0:
-        cont += 1
+def calcular_numeros_pares() -> int:
+    """
+    
+    """
+    numero = 0
+    cont = 0
+    while numero != -1 or numero is 0:
+        numero = pedir_num("Ingrese un número: ")
+        if numero <= -2:
+            print("Número inválido")
+            numero = 0
+        elif numero % 2 == 0:
+            cont += 1
 
-    if numero > 0:
-        suma = 0
-        for i in range (numero):
-            suma += i
-        print(suma)
+        if numero > 0:
+            suma = 0
+            for i in range (numero):
+                suma += i
+            print(f"La suma de los dígitos del número {numero} es {suma}.")
+    return cont
 
-
-print(F"PARES {cont}")
 
 def main():
-    return
+    mostrar_numeros_ingresados = calcular_numeros_pares()
+
+    print (f"Has ingresado un total de {mostrar_numeros_ingresados} números pares.")
+
 
 if __name__ == "__main__":
     main()

@@ -16,6 +16,7 @@ from src.bucles.utils import validar_num, validar_num_positivo
 def test_validar_num(numero, expected):
     assert validar_num(numero) == expected
 
+
 @pytest.mark.parametrize(
     "numero, expected",
     [

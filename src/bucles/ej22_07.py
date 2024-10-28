@@ -7,16 +7,15 @@ def tabla_multiplicar_numero(num: int):
     """
     
     """
-    for i in range(10):
-        print(f"{num} x {i} es: {(i * num)}")
+    tabla_multiplicar = ""
+    for i in range(10+1):
+        tabla_multiplicar += f"{num} x {i} es: {(i * num)}\n"
+    return tabla_multiplicar.rstrip("\n")
 
 
 def main():
-    """
-    
-    """
     num = pedir_num("Introduce un número: ")
-    tabla_multiplicar_numero(num)
+    print(tabla_multiplicar_numero(num))
 
 
 if __name__ == "__main__":

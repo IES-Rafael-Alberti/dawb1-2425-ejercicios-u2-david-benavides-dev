@@ -38,13 +38,15 @@ def generar_triangulo_rectangulo(n: int):
     """
     
     """
+    piramide = ""
     for i in range(n):
-        print("*" * i)
+        piramide += f"{'*' * (i)}\n"
+    return piramide.rstrip("\n")
 
 
 def main():
     numero = obtener_entero()
-    generar_triangulo_rectangulo(numero)
+    print(generar_triangulo_rectangulo(numero))
 
 
 if __name__ == "__main__":

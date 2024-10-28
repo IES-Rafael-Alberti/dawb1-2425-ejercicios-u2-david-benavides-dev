@@ -3,7 +3,7 @@
 from utils import *
 
 
-def mostrar_impares(numero: int) -> str:
+def mostrar_cuenta_atras(numero: int) -> str:
     """
     
     """
@@ -17,7 +17,7 @@ def mostrar_impares(numero: int) -> str:
 
 def main():
     numero = pedir_num("Introduce un número entero positivo: ")
-    print(mostrar_impares(numero))
+    print(mostrar_cuenta_atras(numero))
 
 
 if __name__ == "__main__":

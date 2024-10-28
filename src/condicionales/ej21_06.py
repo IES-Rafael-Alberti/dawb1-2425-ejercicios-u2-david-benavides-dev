@@ -7,6 +7,9 @@ GENERO_VALIDO = 'Mujer', 'Hombre'
 
 
 def pedir_nombre(msj: str, nombre = None) -> str:
+    """
+    
+    """
     while nombre is None:
         nombre = input(msj).strip().capitalize()
         if validar_nombre(nombre):
@@ -15,6 +18,9 @@ def pedir_nombre(msj: str, nombre = None) -> str:
 
 
 def validar_nombre(nombre: str) -> bool:
+    """
+    
+    """
     try:
         if str(nombre) and len(nombre) > 1 and nombre.isalpha():
             return True
@@ -25,6 +31,9 @@ def validar_nombre(nombre: str) -> bool:
 
 
 def pedir_genero(msj: str, genero = None) -> str:
+    """
+    
+    """
     while genero is None:
         genero = input(msj).strip().capitalize()
         if validar_genero(genero):
@@ -33,6 +42,9 @@ def pedir_genero(msj: str, genero = None) -> str:
 
 
 def validar_genero(genero: str) -> bool:
+    """
+    
+    """
     try:
         if genero in GENERO_VALIDO:
             return True
@@ -43,6 +55,9 @@ def validar_genero(genero: str) -> bool:
 
 
 def obtener_grupo(nombre: str, genero: str):
+    """
+    
+    """
     if genero == "Mujer" and "A" <= nombre[0] <= "M":
         return "A"
     elif genero == "Hombre" and "N" <= nombre[0] <= "Z":
@@ -52,6 +67,9 @@ def obtener_grupo(nombre: str, genero: str):
 
 
 def mostrar_informacion(nombre: str, genero: str, grupo: str) -> str:
+    """
+    
+    """
     return f"Te llamas {nombre} y tu genero es {genero}. Perteneces al grupo {grupo}."
 
 

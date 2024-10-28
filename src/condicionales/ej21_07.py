@@ -18,6 +18,9 @@ nivel_5 = [60000, '45%']
 
 
 def calcular_impositivo(impuesto: float) -> str:
+    """
+    
+    """
     if impuesto <= nivel_1[0]:
         impositivo = nivel_1[1]
     elif nivel_2[0] <= impuesto <= nivel_2[1]:
@@ -32,6 +35,9 @@ def calcular_impositivo(impuesto: float) -> str:
 
 
 def mostrar_renta(impuesto: float) -> str:
+    """
+    
+    """
     return f"Para tu renta anual de {impuesto:.2f} € le corresponde un tipo de impositivo del {calcular_impositivo(impuesto)}."
 
 

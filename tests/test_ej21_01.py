@@ -1,6 +1,7 @@
 import pytest
 from src.condicionales.ej21_01 import *
 
+
 @pytest.mark.parametrize(
     "mock_input, expected",
     [
@@ -9,10 +10,10 @@ from src.condicionales.ej21_01 import *
         ("6", 6),
     ]
 )
-
 def test_obtener_edad_params(mock_input, expected, monkeypatch):
     monkeypatch.setattr('builtins.input', lambda _: mock_input)
     assert obtener_edad() == expected
+
 
 @pytest.mark.parametrize(
     "edad, expected",
@@ -21,9 +22,9 @@ def test_obtener_edad_params(mock_input, expected, monkeypatch):
         (18, True),
     ]
 )
-
 def test_mostrar_edad_params(edad_validada, expected):
     assert mostrar_edad(edad_validada) == expected
+
 
 @pytest.mark.parametrize(
     "edad_validada, expected",
@@ -32,6 +33,5 @@ def test_mostrar_edad_params(edad_validada, expected):
         (18, "Tienes 18 años y eres mayor de edad."),
     ]
 )
-
 def test_mostrar_edad_params(edad_validada, expected):
     assert mostrar_edad(edad_validada) == expected

@@ -17,7 +17,7 @@ def introducir_password(msj) -> str:
     
     """
     pass_user = input(msj)
-    while comparar_password(pass_user) is not True:
+    while not comparar_password(pass_user):
         pass_user = input("La contraseña no coincide. Vuelve a intentarlo: ")
     return f"Bienvenido."
 

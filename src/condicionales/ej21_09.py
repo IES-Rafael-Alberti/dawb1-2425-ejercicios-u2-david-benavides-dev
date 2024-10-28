@@ -7,12 +7,18 @@ from utils import *
 
 
 def validar_edad(edad: int) -> bool:
+    """
+    
+    """
     if edad <= 0 or edad > 100:
         return False
     return True
 
 
 def pedir_edad(msj: str):
+    """
+    
+    """
     edad = pedir_num(msj)
 
     while validar_edad(edad) is False:
@@ -22,6 +28,9 @@ def pedir_edad(msj: str):
 
 
 def calcular_precio(edad: int) -> float:
+    """
+    
+    """
     if edad < 4:
         return 0
     elif 4 <= edad < 18:
@@ -30,6 +39,9 @@ def calcular_precio(edad: int) -> float:
 
 
 def mostrar_precio(edad: int, precio: float) -> str:
+    """
+    
+    """
     return f"Al tener {edad} años, tu entrada cuesta: {precio:.2f} €."
 
 
