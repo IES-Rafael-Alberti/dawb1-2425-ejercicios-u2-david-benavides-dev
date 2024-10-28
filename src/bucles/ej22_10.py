@@ -1,6 +1,30 @@
 # Ejercicio 2.2.10
 # Escribir un programa que pida al usuario un número entero y muestre por pantalla si es un número primo o no.
-from utils import *
+
+
+def pedir_num_positivo(msg) -> int:
+    """
+    
+    """
+    numero = None
+    while numero == None:
+        numero = input(msg)
+        if validar_num_positivo(numero):
+            return int(numero)
+        else:
+            print("**ERROR** Debes introducir un número entero positivo")
+            numero = None
+
+
+def validar_num_positivo(numero: str) -> bool:
+    """
+    
+    """
+    try:
+        int(numero)
+        return int(numero) > 0
+    except ValueError:
+        return False
 
 
 def validar_primo(num) -> bool:
@@ -26,7 +50,7 @@ def mostrar_numero(num):
 
 def main():
 
-    num = pedir_num("Introduce un número: ")
+    num = pedir_num_positivo("Introduce un número: ")
 
     print(mostrar_numero(num))
 

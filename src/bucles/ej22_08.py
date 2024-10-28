@@ -7,7 +7,31 @@
 # 5 3 1
 # 7 5 3 1
 # 9 7 5 3 1
-from utils import *
+
+
+def pedir_num_positivo(msg) -> int:
+    """
+    
+    """
+    numero = None
+    while numero == None:
+        numero = input(msg)
+        if validar_num_positivo(numero):
+            return int(numero)
+        else:
+            print("**ERROR** Debes introducir un número entero positivo")
+            numero = None
+
+
+def validar_num_positivo(numero: str) -> bool:
+    """
+    
+    """
+    try:
+        int(numero)
+        return int(numero) > 0
+    except ValueError:
+        return False
 
 
 def mostrar_triangulo_rectangulo_numeros(num: int):
@@ -23,7 +47,7 @@ def mostrar_triangulo_rectangulo_numeros(num: int):
 
 
 def main():
-    num = pedir_num("Introduce un número: ")
+    num = pedir_num_positivo("Introduce un número: ")
     mostrar_triangulo_rectangulo_numeros(num)
 
 
