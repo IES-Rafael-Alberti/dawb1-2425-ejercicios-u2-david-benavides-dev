@@ -11,6 +11,7 @@
 # Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 from utils import *
 
+
 default_puntuacion = 2400
 
 niveles_validos = [0.0, 0.4, 0.6]

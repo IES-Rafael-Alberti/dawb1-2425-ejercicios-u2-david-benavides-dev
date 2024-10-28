@@ -1,9 +1,11 @@
 from os import system, name
 
+
 # Funcion para limpiar la consola
 def clear():
     if name == 'nt':
         _ = system('cls')
+
 
 # Función que solicita entero al usuario.
 def pedir_num(msg) -> int:
@@ -19,6 +21,7 @@ def pedir_num(msg) -> int:
             print("**ERROR** Debes introducir un número")
             numero = None
 
+
 # Función para validar si un número es entero.
 def validar_num(numero: str) -> bool:
     """
@@ -29,7 +32,8 @@ def validar_num(numero: str) -> bool:
         return True
     except ValueError:
         return False
-    
+
+
 # Función que solicita entero positivo al usuario.
 def pedir_num_positivo(msg) -> int:
     """
@@ -44,6 +48,7 @@ def pedir_num_positivo(msg) -> int:
             print("**ERROR** Debes introducir un número entero positivo")
             numero = None
 
+
 #Función para validar si el número es entero positivo.
 def validar_num_positivo(numero: str) -> bool:
     """
@@ -54,6 +59,7 @@ def validar_num_positivo(numero: str) -> bool:
         return int(numero) > 0
     except ValueError:
         return False
+
 
 # Función que solicita float al usuario.
 def pedir_float(msg) -> float:
@@ -69,6 +75,7 @@ def pedir_float(msg) -> float:
             print("**ERROR** Debes introducir un número flotante.")
             numero = None
 
+
 # Función para validar si un número es flotante.
 def validar_float(numero: str) -> bool:
     """
@@ -79,11 +86,11 @@ def validar_float(numero: str) -> bool:
         return True
     except ValueError:
         return False
-    
+
+
 # Función para "pausar" la ejecución de un programa hasta que el usuario pulse ENTER.
 def pause():
     input("Pulsa ENTER para continuar...")
-
 
 
 ################################################ OTRAS FORMAS DE VALIDAR #################################################

@@ -10,6 +10,7 @@
 # Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva.
 from utils import *
 
+
 # Listas con ingredientes
 ingredientes_vegetarianos = ["Pimiento", "Tofu"]
 ingredientes_no_vegetarianos = ["Peperoni", "Jamón", "Salmón"]
