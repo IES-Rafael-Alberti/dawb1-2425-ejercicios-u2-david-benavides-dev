@@ -4,14 +4,23 @@
 # Si elige las opciones 1 ó 2 se imprimirá un texto. Si elige la opción 3, se interrumpirá la impresión del menú y el programa finalizará.
 from utils import *
 
+
 OPCIONES_VALIDAS = 1, 2, 3
 
+
 def mostrar_menu():
+    """
+    
+    """
     print("1- comenzar programa")
     print("2- imprimir listado")
     print("3- finalizar programa")
 
+
 def pedir_opcion() -> int:
+    """
+    
+    """
     mostrar_menu()
     opcion = None
     while opcion is None:
@@ -20,6 +29,7 @@ def pedir_opcion() -> int:
             print(f"**ERROR** La opción {opcion} no existe.")
             opcion = None
     return opcion
+
 
 def ejecutar_opcion(opcion: int):
     """
@@ -33,17 +43,27 @@ def ejecutar_opcion(opcion: int):
         print("Hasta pronto!")
         exit()
 
+
 def start() -> str:
+    """
+    
+    """
     return f"Este es el texto de opcion uno"
 
+
 def imprimir_listado() -> str:
+    """
+    
+    """
     return f"Esto es el texto de opcion dos"
+
 
 def main():
     while True:
         opcion = pedir_opcion()
 
         ejecutar_opcion(opcion)
+
 
 if __name__ == "__main__":
     main()

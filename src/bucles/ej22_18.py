@@ -3,6 +3,7 @@
 # La condición de corte es que se ingrese el número -1. Al finalizar, mostrar cuántos de los números ingresados por el usuario fueron números pares.
 from utils import *
 
+
 numero = 0
 cont = 0
 while numero != -1:

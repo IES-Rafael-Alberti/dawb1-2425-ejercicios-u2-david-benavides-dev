@@ -3,6 +3,7 @@
 # Al finalizar, informar la cantidad de dígitos pares y de dígitos impares leídos en total.
 from utils import *
 
+
 def main():
     parar = False
 
@@ -11,8 +12,7 @@ def main():
 
         if numero == 0:
             parar = True
-        
-        
+
 
 if __name__ == "__main__":
     main()

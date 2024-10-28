@@ -3,6 +3,7 @@
 # Si el carácter no coincide, indicar que no hay coincidencia en esa posición (imprimiendo la posición) y continuar. 
 # Si se encuentra una coincidencia, indicar en qué posición se encontró y finalizar la ejecución.
 
+
 def main():
     frase = input("Ingrese una frase: ")
     buscar_letra = input("Ingrese una letra: ")

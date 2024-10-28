@@ -7,8 +7,10 @@ frase = input("Introduce una frase: ")
 
 frase = frase.split()
 
+
 palabra_mas_larga = ""
 contar_palabras = 0
+
 
 for palabra in frase:
     if len(palabra) > len(palabra_mas_larga):
@@ -21,6 +23,7 @@ print(contar_palabras)
 
 def main():
     return
+
 
 if __name__ == "__main__":
     main()
