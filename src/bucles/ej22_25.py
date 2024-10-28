@@ -3,26 +3,33 @@
 # Precondición: se tomará como separador de palabras al carácter “ “ (espacio), ya sea uno o más.
 
 
-frase = input("Introduce una frase: ")
+def pedir_frase(msj: str) -> str:
+    """
+    
+    """
+    frase = input(msj)
+    return frase.split(" ")
 
-frase = frase.split()
 
+def devolver_palabras(frase: str) -> tuple:
+    """
+    
+    """
+    palabra_mas_larga = ""
+    numero_palabras = 0
 
-palabra_mas_larga = ""
-contar_palabras = 0
-
-
-for palabra in frase:
-    if len(palabra) > len(palabra_mas_larga):
-        palabra_mas_larga = palabra
-    contar_palabras += 1
-
-print(palabra_mas_larga)
-print(contar_palabras)
+    for palabra in frase:
+        if len(palabra) > len(palabra_mas_larga):
+            palabra_mas_larga = palabra
+        numero_palabras += 1
+    return palabra_mas_larga, numero_palabras
 
 
 def main():
-    return
+    frase = pedir_frase("Introduce una frase: ")
+    palabra_mas_larga, numero_palabras = devolver_palabras(frase)
+
+    print(f"La palabra más larga es {palabra_mas_larga} y la frase tenia un total de {numero_palabras} palabras.")
 
 
 if __name__ == "__main__":
