@@ -17,8 +17,26 @@
 # Fin. Se leyeron 2 líneas completas.
 
 
-def main():
+DIGITOS = "1234567890"
+
+
+def contar_numeros(libro: str, cont = 0) -> int:
+    for DIGITOS in libro:
+        cont += 1
+    return cont
+
+
+def pedir_libros(libro = None, lista_libro = "") -> str:
+    while libro != "*":
+        libro = input("Libro: ")
+        if libro == "/":
+            lista_libro = libro
+            print(f"Linea completa. Aparecen {contar_numeros(lista_libro)} dígitos numéricos.")
     pass
+
+
+def main():
+    pedir_libros()
 
 
 if __name__ == "__main__":
