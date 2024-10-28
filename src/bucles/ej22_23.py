@@ -17,26 +17,33 @@
 # Fin. Se leyeron 2 líneas completas.
 
 
-DIGITOS = "1234567890"
-
-
 def contar_numeros(libro: str, cont = 0) -> int:
-    for DIGITOS in libro:
-        cont += 1
+    """
+    
+    """
+    for digitos in libro:
+        if digitos.isdigit():
+            cont += 1
     return cont
 
 
-def pedir_libros(libro = None, lista_libro = "") -> str:
+def pedir_libros(libro = None) -> str:
+    """
+    
+    """
+    contar_libro = 0
     while libro != "*":
         libro = input("Libro: ")
-        if libro == "/":
-            lista_libro = libro
-            print(f"Linea completa. Aparecen {contar_numeros(lista_libro)} dígitos numéricos.")
-    pass
+        if libro != "/":
+            digitos_en_libro = contar_numeros(libro)
+        elif libro == "/":
+            print(f"Linea completa. Aparecen {digitos_en_libro} dígitos numéricos.")
+            contar_libro += 1
+    return f"Fin. Se leyeron {contar_libro} lineas completas."
 
 
 def main():
-    pedir_libros()
+    print(pedir_libros())
 
 
 if __name__ == "__main__":
