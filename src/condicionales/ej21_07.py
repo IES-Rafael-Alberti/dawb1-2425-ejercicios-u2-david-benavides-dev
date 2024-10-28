@@ -9,11 +9,13 @@
 # Escribir un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo impositivo que le corresponde.
 from utils import *
 
+
 nivel_1 = [9999, '5%']
 nivel_2 = [10000, 19999, '15%']
 nivel_3 = [20000, 34999, '20%']
 nivel_4 = [35000, 59999, '30%']
 nivel_5 = [60000, '45%']
+
 
 def calcular_impositivo(impuesto: float) -> str:
     if impuesto <= nivel_1[0]:
@@ -28,12 +30,15 @@ def calcular_impositivo(impuesto: float) -> str:
         impositivo = nivel_5[1]
     return impositivo
 
+
 def mostrar_renta(impuesto: float) -> str:
     return f"Para tu renta anual de {impuesto:.2f} € le corresponde un tipo de impositivo del {calcular_impositivo(impuesto)}."
+
 
 def main():
     impuesto = pedir_float("Introduce tu renta anual: ")
     print(mostrar_renta(impuesto))
+
 
 if __name__ == "__main__":
     main()

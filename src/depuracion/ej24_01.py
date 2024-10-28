@@ -3,6 +3,7 @@
 
 a = [8, 3, 1, 19, 14]
 
+
 def burbuja(a: list) -> list:
     """ 
     Este "algoritmo burbuja" sirve para intercambiar números de menor a mayor dentro de una lista usando dos bucles anidados.
@@ -21,8 +22,10 @@ def burbuja(a: list) -> list:
                 a[j], a[j + 1] = a[j + 1], a[j]
     return a
 
+
 def main():
     print(burbuja(a))
+
 
 if __name__ == "__main__":
     main()

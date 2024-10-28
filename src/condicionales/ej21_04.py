@@ -1,6 +1,7 @@
 # Ejercicio 2.1.4
 # Escribir un programa que pida al usuario un número entero y muestre por pantalla si es par o impar.
 
+
 def pedir_num() -> int:
     """
     
@@ -14,6 +15,7 @@ def pedir_num() -> int:
             print("**ERROR** Debes introducir un número")
             numero = None
 
+
 def validar_num(numero: str) -> bool:
     """
     
@@ -24,6 +26,7 @@ def validar_num(numero: str) -> bool:
     except ValueError:
         return False
 
+
 def es_par_impar(num_validado: int) -> bool:
     """
     
@@ -32,6 +35,7 @@ def es_par_impar(num_validado: int) -> bool:
     if num_validado % 2 == 0:
         return True
     return False
+
 
 def mostrar_resultado(num_validado) -> str:
     """
@@ -48,6 +52,7 @@ def main():
     """
     numero = pedir_num()
     print(mostrar_resultado(numero))
+
 
 if __name__ == "__main__":
     main()

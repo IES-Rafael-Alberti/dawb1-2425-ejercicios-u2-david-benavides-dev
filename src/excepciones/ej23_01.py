@@ -1,6 +1,7 @@
 # Ejercicio 2.3.1
 # Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 
+
 def pedir_num(msg) -> int:
     """
     
@@ -14,6 +15,7 @@ def pedir_num(msg) -> int:
             print("**ERROR** Debes introducir un número")
             numero = None
 
+
 def validar_num(numero: str) -> bool:
     """
     
@@ -23,6 +25,7 @@ def validar_num(numero: str) -> bool:
         return True
     except ValueError:
         return False
+
 
 def validar_edad(edad: int) -> bool:
     if edad < 0 or edad > 100:

@@ -5,10 +5,12 @@
 # Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años, 10€.
 from utils import *
 
+
 def validar_edad(edad: int) -> bool:
     if edad <= 0 or edad > 100:
         return False
     return True
+
 
 def pedir_edad(msj: str):
     edad = pedir_num(msj)
@@ -18,6 +20,7 @@ def pedir_edad(msj: str):
 
     return edad
 
+
 def calcular_precio(edad: int) -> float:
     if edad < 4:
         return 0
@@ -25,8 +28,10 @@ def calcular_precio(edad: int) -> float:
         return 5
     return 10
 
+
 def mostrar_precio(edad: int, precio: float) -> str:
     return f"Al tener {edad} años, tu entrada cuesta: {precio:.2f} €."
+
 
 def main():
     edad = pedir_edad("Introduce tu edad")

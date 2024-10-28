@@ -1,8 +1,8 @@
 # Ejercicio 2.1.5
 # Para tributar un determinado impuesto se debe ser mayor de 16 años y tener unos ingresos iguales o superiores a 1000 € mensuales. 
 # Escribir un programa que pregunte al usuario su edad y sus ingresos mensuales y muestre por pantalla si el usuario tiene que tributar o no.
-
 from utils import *
+
 
 def validar_edad(edad: int) -> bool:
     """
@@ -12,6 +12,7 @@ def validar_edad(edad: int) -> bool:
         return True
     return False
 
+
 def validar_ingreso(ingresos: float) -> bool:
     """
     
@@ -19,6 +20,7 @@ def validar_ingreso(ingresos: float) -> bool:
     if ingresos >= 1000:
         return True
     return False
+
 
 def main():
     """
@@ -31,6 +33,7 @@ def main():
         print("Tributas")
     else:
         print("No tributas")
+
 
 if __name__ == "__main__":
     main()

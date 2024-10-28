@@ -18,6 +18,7 @@ ingredientes_default =  ["Tomate", "Mozzarella"]
 OPCIONES_VEG = "vegetariana", "veg"
 OPCIONES_NO_VEG = "no vegetariana", "no veg"
 
+
 def preguntar_tipo_pizza(respuesta: str) -> bool:
     """
     
@@ -30,17 +31,19 @@ def preguntar_tipo_pizza(respuesta: str) -> bool:
     elif respuesta in OPCIONES_NO_VEG:
         return False
 
+
 def mostrar_ingredientes(tipo_de_pizza: bool) -> str:
     """
     
     """
     print(f"Puedes elegir SOLO UNO de los siguientes ingredientes para tu pizza: ")
     if tipo_de_pizza is True:
-        for _ in ingredientes_vegetarianos:
-            print(_)
+        for i in ingredientes_vegetarianos:
+            print(i)
     elif tipo_de_pizza is False:
-        for _ in ingredientes_no_vegetarianos:
-            print(_)
+        for i in ingredientes_no_vegetarianos:
+            print(i)
+
 
 def escoger_ingrediente(opcion: str, tipo_pizza: bool) -> list:
     """
@@ -60,6 +63,7 @@ def escoger_ingrediente(opcion: str, tipo_pizza: bool) -> list:
 
     return ingredientes_default
 
+
 def mostrar_pizza(tipo_pizza, ingredientes_pizza) -> str:
     """
     
@@ -70,6 +74,7 @@ def mostrar_pizza(tipo_pizza, ingredientes_pizza) -> str:
         tipo_pizza = "no vegetariana"
 
     return f"Tu pizza {tipo_pizza} lleva {', '.join(ingredientes_pizza)}."
+
 
 def menu():
     """
@@ -114,6 +119,7 @@ def main():
         else:
             print("Esa pizza no existe.")
             tipo_de_pizza = None
+
 
 if __name__ == "__main__":
     main()

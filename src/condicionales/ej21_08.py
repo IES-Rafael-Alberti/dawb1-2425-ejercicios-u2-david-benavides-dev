@@ -15,16 +15,19 @@ default_puntuacion = 2400
 
 niveles_validos = [0.0, 0.4, 0.6]
 
+
 def validar_puntuacion(puntuacion: float) -> bool:
     if puntuacion not in niveles_validos and puntuacion < 0.6:
         return False
     return True
+
 
 def obtener_puntuacion(msj: str) -> float:
     puntuacion = pedir_float(msj)
     while not validar_puntuacion(puntuacion):
         puntuacion = pedir_float("**ERROR** Debes introducir una puntuación de 0.0, 0.4, 0.6 o más: ")
     return puntuacion
+
 
 def definir_nivel(puntuacion: float) -> str:
     if puntuacion == niveles_validos[0]:
@@ -34,11 +37,14 @@ def definir_nivel(puntuacion: float) -> str:
     else:
         return "Meritorio"
 
+
 def calcular_dinero_recibido(puntuacion: float) -> float:
     return puntuacion * default_puntuacion
 
+
 def mostrar_rendimiento(nivel, dinero) -> str:
     return f"Su nivel de rendimiento es {nivel} y vas a recibir {dinero} € euros."
+
 
 def main():
     puntuacion = obtener_puntuacion("Introduce tu puntuación: ")
@@ -47,6 +53,7 @@ def main():
     dinero = calcular_dinero_recibido(puntuacion)
 
     print(mostrar_rendimiento(nivel, dinero))
+
 
 if __name__ == "__main__":
     main()

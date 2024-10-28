@@ -61,7 +61,5 @@ def main():
     print(mostrar_division(num1, num2, divisor))
 
 
-
-
 if __name__ == "__main__":
     main()
